@@ -41,4 +41,28 @@ public class Reader {
 
         return dictionary;
     }
+
+    /**
+     * Lee el texto que se va a traducir
+     * @return Texto en inglés
+     */
+    public String readFile() {
+        String text = "";
+        
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+        
+            String line;
+            while ((line = br.readLine()) != null) {
+                text = line;
+            }
+
+            br.close();
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return text;
+    }
 }

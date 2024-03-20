@@ -11,6 +11,7 @@
 (car,coche)
 (school,escuela)
 (tree,arbol)
+(went,fue)
 (sun,sol)
 (moon,luna)
 (chair,silla)
