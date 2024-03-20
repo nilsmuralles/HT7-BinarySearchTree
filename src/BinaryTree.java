@@ -45,7 +45,7 @@ public class BinaryTree<K extends Comparable<K>, V> {
                 current.setRight(new Node<Association<K,V>>(association));
             }
 
-        } else if (association.compareTo(current.getValue()) == -1) {
+        } else if (association.compareTo(current.getValue()) == -1 || association.compareTo(current.getValue()) == 0) {
             if (current.getLeft() != null) {
                 insert(current.getLeft(), association);
             } else {
@@ -82,7 +82,7 @@ public class BinaryTree<K extends Comparable<K>, V> {
             }
         }
 
-        if (temp.compareTo(current.getValue()) == -1) {
+        if (temp.compareTo(current.getValue()) == -1 || temp.compareTo(current.getValue()) == 0) {
             if (current.getLeft() != null) {
                 return search(current.getLeft(), key);
             }
